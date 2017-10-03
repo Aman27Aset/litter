@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Litter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= csrf_meta_tags %>
+<center><div class="jumbotron">
+  <h1 class="display-3">Welcome !!!</h1>
+  <p class="lead">Click on the button below to see a RANDOM TWEET</p>
+  <hr class="my-4">
+  
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">CLICK</a>
+  </p>
+</div></center>
+</div>
+
+</div>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  </p>
+  <body>
+   
+  
+
+  <%= render 'shared/navbar' %>
+  <div class="container">
+    <%= yield %>
+  </div>
+  </body>
+</html>
