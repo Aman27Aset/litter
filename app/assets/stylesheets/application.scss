@@ -1,2 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.jumbotron {
+	background-color: pink;
+	
+}
+
+.jumbotron p {
+	font-size: 30px;
+}
