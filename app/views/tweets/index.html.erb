@@ -3,32 +3,34 @@
 <h1>LIST OF ALL ALL TWEET</h1>
 <h1>Welcome to Litter</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Body</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tweets.each do |tweet| %>
-      <%= @hello %>
-      
-      <tr>
-        <p><%= tweet.body %></p>
-        <p><%= tweet.user %></p>
-        <p><%= link_to 'Show', tweet %></p>
-        <p><%= link_to 'Edit', edit_tweet_path(tweet) %></p>
-        <p><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<center>
+<% @tweets.each do |tweet| %>
+<div class="jumbotron" style="max-width: 500px">
+  <p><%= tweet.body %></p>
+  <h4><%= tweet.user %></h4>
+  <%= link_to 'Show', tweet, class: "btn btn-primary btn-sm" %>
+  <%= link_to 'Edit', edit_tweet_path(tweet), class: "btn btn-primary btn-sm" %>
+  <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-sm" %>
+</div>
+<% end %>
+</center>
 
 <br>
 
-<p id="notice"><%= notice %></p>
 
 
+.container {
+  margin: 200px auto;
+}
+.row {
+  margin-bottom: 30px;
+}
+#author {
+  font-style: italic;
+}
+.btn {
+  margin: 5px;
+}
+.fa {
+  padding-right: 6px;
+}
